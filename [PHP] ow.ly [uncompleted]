@@ -1,4 +1,5 @@
 <?php
+// Haven't test this code but I think it should be work :)
 function &owly($url) {
 	
 	$url = urlencode($url); // Encoded URL
