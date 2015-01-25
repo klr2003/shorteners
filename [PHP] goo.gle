@@ -1,7 +1,7 @@
 <?php 
 function &google($url) {     
 
-	$apiKey = 'enter-your-google-api-key-here'; // Goo.gle ApiKey     
+	$apiKey = 'AIzaSyBRZxAbqYUaG85JLzF3CmEdLesgjysoxxx'; // Goo.gle ApiKey     
 	$postData = array('longUrl' => $url,
 	                  'key'     => $apiKey);
     $jsonData = json_encode($postData); // Encoded PostData
