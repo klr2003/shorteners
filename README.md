@@ -1,3 +1,3 @@
-# shorteners
-All the code I developed using URL Shortener Service's APIs.
-Some of them haven't completed YET.
+To use the script, just call:<br />
+   $result =& <FunctionName>(parameter1,parameter2,..);<br />
+Even a 5 years kid can do it :))<br />
