@@ -1,0 +1,16 @@
+<?php
+function &owly($url) {
+	
+	$url = urlencode($url); // Encoded URL
+	$apiKey = ''; // I doesn't have a Twitter Account o.o
+
+    $json = file_get_contents('http://ow.ly/api/1.1/url/shorten?apiKey='.$apiKey.'&longUrl='.$url);
+    $obj = json_decode($json);
+
+    if (!$obj->results->{'shortUrl'}) {
+    	return 'error';
+    } else {
+    	return $obj->results->{'shortUrl'};
+    }
+}
+?>
