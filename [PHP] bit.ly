@@ -1,5 +1,5 @@
 <?php
-function bitly($url) {
+function &bitly($url) {
 
     $login = "tricirrecsquare"; // Bit.ly UserName
     $appkey = "R_29a2648e0a5243bfbbcca43c1fdf6a9d"; // Bit.ly AppKey, can be found at 'https://bitly.com/a/settings/advanced'
@@ -17,9 +17,9 @@ function bitly($url) {
     curl_close($ch);
 
     if ($json->{'status_code'} == '200') {
-    	echo $json->data->{'url'};
+    	return $json->data->{'url'};
     } else {
-    	echo 'error';
+    	return 'error';
     }
 
 }
