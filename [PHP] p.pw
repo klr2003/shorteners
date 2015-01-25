@@ -1,0 +1,18 @@
+<?php
+function &ppw($url){
+
+$id = '218565'; // P.pw UserID
+$url = urlencode($url); // Encoded URL
+$type = 'json'; // Response (JSON/XML) (optional)
+
+$json = file_get_contents('http://p.pw/API/write/get?id='.$id.'&url='.$url.'&type='.$type);
+$obj = json_decode($json);
+
+if ($obj->{'success'} == True) {
+    return $obj->data->{'url'};
+} else {
+    return 'error';
+}
+
+}
+?>
